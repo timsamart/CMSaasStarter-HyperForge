@@ -17,6 +17,10 @@
     MiniMap,
   } from "@xyflow/svelte"
   import "@xyflow/svelte/dist/style.css"
+  import { getContext } from "svelte"
+  import type { Writable } from "svelte/store"
+  let adminSection: Writable<string> = getContext("adminSection")
+  adminSection.set("home")
 </script>
 
 <div class="dashboard-container">
